@@ -1,0 +1,93 @@
+.standard-label {
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 17px;
+  color: #333333;
+  display: block;
+}
+.inputwrapper {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.error-label {
+  color: #d32f2f;
+}
+.input {
+  width: 200px;
+  height: 56px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: block;
+  font-family: Noto Sans JP;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: #333333;
+}
+.input::placeholder {
+  opacity: 1;
+  color: #828282;
+}
+.input:disabled {
+  background: #f2f2f2;
+  border: 1px solid #e0e0e0;
+}
+.input:hover {
+  border: 2px solid #333333;
+}
+.input:focus {
+  border: 2px solid #2962ff;
+  outline: transparent;
+}
+.input:focus + .standard-label {
+  color: #2962ff;
+}
+.input:disabled:hover,
+.input:disabled:focus {
+  border: 1px solid #e0e0e0 !important;
+}
+.inputActive-hover {
+  border: 2px solid #333333;
+}
+.error {
+  border: 2px solid #d32f2f;
+}
+.error + .standard-label {
+  color: #d32f2f;
+}
+.error:hover + .standard-label {
+  color: #333333;
+}
+.error:focus,
+.errorActive-focus:focus {
+  border: 2px solid #d32f2f;
+  outline: transparent;
+}
+.error:focus + .standard-label,
+.errorActive-focus:focus + .standard-label {
+  color: #d32f2f;
+}
+.errorActive-focus {
+  border: 2px solid #d32f2f;
+  outline: transparent;
+}
+.errorActive-focus + .standard-label {
+  color: #d32f2f;
+}
+.errorActive-focus:hover + .standard-label {
+  color: #333333;
+}
+.inputActive-focus {
+  border: 2px solid #2962ff;
+  outline: transparent;
+}
+.inputActive-focus + .standard-label {
+  color: #2962ff;
+}
+.inputActive-focus:hover + .standard-label {
+  color: #333333;
+}

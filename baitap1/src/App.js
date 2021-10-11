@@ -2,11 +2,12 @@ import './App.css';
 import Header from './Component/Header';
 import Content from './Component/Content'
 import Edit from './Component/Edit'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {BrowserRouter as Router , Switch, Route} from 'react-router-dom';
 
 
 function App() {
+  const LOCAL_STORAGE_KEY = 'contact'
   const [state, setState] = useState({
     name:"John Wick",
     email: "donottake@mydog.com",
@@ -17,6 +18,15 @@ function App() {
   const UpdateInfo = (data) =>{
     setState(data)
   }
+  useEffect(()=>{
+    const retriveContact = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+    if(retriveContact){
+      setState(retriveContact)
+    }
+  },[])
+  useEffect(()=>{
+    localStorage.setItem(LOCAL_STORAGE_KEY,JSON.stringify(state))
+  },[state])
   return (
     <div className="App">
       <Router>
