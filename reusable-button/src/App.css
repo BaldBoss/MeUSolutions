@@ -1,0 +1,38 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.Wrapper {
+  margin: 0;
+  padding: 2em 6em;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+.row {
+  display: flex;
+  margin-top: 3em;
+  width: 40%;
+  justify-content: space-between;
+}
+.row-md {
+  width: 50%;
+}
+.row-mdd {
+  width: 70%;
+}
+.row-lg {
+  width: 100%;
+}
+.normal-text,
+.gray-text {
+  font-size: 1em;
+  font-weight: 500;
+}
+.gray-text {
+  color: #828282;
+}

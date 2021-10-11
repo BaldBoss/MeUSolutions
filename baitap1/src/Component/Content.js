@@ -65,7 +65,7 @@ function Content(props) {
 
                         </div>
                         <div className="grid_block_full ta-c">
-                            <button type="button" className="button secondary" onClick={()=> history.push('/edit')} >
+                            <button type="button" className="button secondary" onClick={()=> history.push('/edit')}  >
                                 Edit
                             </button>
 
