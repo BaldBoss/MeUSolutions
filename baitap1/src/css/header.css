@@ -1,0 +1,72 @@
+.Container {
+  max-width: 840px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header {
+  width: 100%;
+  position: fixed;
+  background-color: #fff;
+}
+.header img {
+  width: 60px;
+  height: 60px;
+  vertical-align: middle;
+}
+.section {
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+.grid {
+  margin-top: -15px;
+  margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.grid_block {
+  width: 45%;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.grid_block_full {
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+}
+.field-label {
+  margin-bottom: 5px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.field-value {
+  font-weight: bold;
+}
+.button {
+  width: 250px;
+  border-radius: 14px;
+  padding: 10px 15px;
+  display: inline-block;
+  background-color: #546e7a;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.button.secondary {
+  background-color: #43a047;
+}
+.ta-c {
+  text-align: center;
+}
+.field {
+  width: 90%;
+  padding: 10px 15px;
+  border: 0;
+  border-radius: 5px;
+  display: block;
+}
