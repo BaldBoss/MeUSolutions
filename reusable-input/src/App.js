@@ -41,6 +41,54 @@ function App() {
                 <Input disabled></Input>
               </div>
           </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input helperText="Something interesting text"/>'}</span>
+              <Input helperText="Something interesting text"/>
+            </div>
+            <div className="input-container">
+              <span className="normal-text">{'<Input helperText="Something interesting text" error/>'}</span>
+              <Input helperText="Something interesting text" error/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input startIcon/>'}</span>
+              <Input startIcon="phone"/>
+            </div>
+            <div className="input-container">
+              <span className="normal-text">{'<Input endIcon/>'}</span>
+              <Input endIcon="lock"/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input value="text"/>'}</span>
+              <Input value="Text"/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input size="sm"/>'}</span>
+              <Input size='sm'/>
+            </div>
+            <div className="input-container">
+              <span className="normal-text">{'<Input size="md"/>'}</span>
+              <Input size='md'/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input fullWidth/>'}</span>
+              <Input fullWidth/>
+            </div>
+          </div>
+          <div className="row">
+            <div className="input-container">
+              <span className="normal-text">{'<Input multiline rows=”4” />'}</span>
+              <Input multiline rows="4"/>
+            </div>
+          </div>
       </div>
      
     </div>

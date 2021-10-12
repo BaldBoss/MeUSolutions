@@ -12,19 +12,32 @@ const input = ({
     value='',
     size='',
     className='',
+    row='',
     ...props
 }) =>{
     const checkfullWidth = fullWidth ? 'fullWidth' : '';
     const checkmultiline = multiline ? 'multiline' : '';
     const checkerror = error ? 'error' : '';
     const checkerrorLabel = errorLabel ? 'errorLabel' : '';
-    return(
+    return !multiline ? (
         <div className="inputwrapper">
-            
-            <input placeholder="Placeholder" className={`input ${className} ${helperText} ${value} ${size} ${checkerror} ${checkfullWidth} ${checkmultiline}  `}{...props}>
-
+            {startIcon ? (
+                    <span className="material-icons start-icon">{startIcon}</span>
+                ) : null}
+            {endIcon ? (
+                    <span className="material-icons end-icon">{endIcon}</span>
+                ) : null}
+            <input placeholder="Placeholder" value={value}  className={`input ${className}  ${size} ${checkerror} ${checkfullWidth} ${checkmultiline}  `}{...props}>
             </input>
             <label className={`standard-label ${checkerrorLabel}`}>{childrent || "Label"}</label>
+            <p className="helperText">{helperText}</p>
+            
+        </div>
+    ) : (
+        <div className="inputwrapper">
+            <textarea placeholder="Placeholder" className={`${checkmultiline}`} rows={row}></textarea>
+            <label className={`standard-label ${checkerrorLabel}`}>{childrent || "Label"}</label>
+
         </div>
     )
 }
