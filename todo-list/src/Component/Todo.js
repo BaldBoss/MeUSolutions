@@ -76,13 +76,14 @@ const Todo = () =>{
         setTaskList(spreadTaskList);
         addLocalStorage(spreadTaskList);
     }
-    const getCompletedTasks = () =>{
-        setCompletedTasks(taskList.filter((item)=> item.isCompleted===true))
-    }
-    const getActiveTaks = () =>{
-        setActiveTasks(taskList.filter((item)=> item.isCompleted===false))
-    }
+
     useEffect(()=>{
+            const getCompletedTasks = () =>{
+                setCompletedTasks(taskList.filter((item)=> item.isCompleted===true))
+            }
+            const getActiveTaks = () =>{
+                setActiveTasks(taskList.filter((item)=> item.isCompleted===false))
+            }
         getCompletedTasks();
         getActiveTaks();
 
