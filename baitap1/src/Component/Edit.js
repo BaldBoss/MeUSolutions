@@ -46,7 +46,8 @@ function Edit(props) {
       }, [updateInfo]);
 
     return (
-        <div className="section">
+        <div className="main">
+            <div className="section">
             <div className="Container">
                 <form noValidate id="detailsForm" onSubmit={save}>
                     <div className="grid">
@@ -96,7 +97,7 @@ function Edit(props) {
                             </label>
 
                         </div>
-                        <div className="grid_block_full">
+                        <div className="grid_block full">
                             <label>
                                 <div className="field-label">
                                     Notes*
@@ -105,7 +106,7 @@ function Edit(props) {
                             </label>
                             {erros.note && <p className="error">{erros.note}</p>}
                         </div>
-                        <div className="grid_block_full ta-c">
+                        <div className="grid_block full ta-c">
                             <button type="submit" className="button secondary">
                                 Save
                             </button>
@@ -116,6 +117,8 @@ function Edit(props) {
             </div>
             
         </div>
+        </div>
+        
     )
 }
 

@@ -9,7 +9,7 @@ const input = ({
     fullWidth = false,
     multiline = false,
     helperText ='',
-    value='',
+    value=false,
     size='',
     className='',
     row='',
@@ -27,7 +27,7 @@ const input = ({
             {endIcon ? (
                     <span className="material-icons end-icon">{endIcon}</span>
                 ) : null}
-            <input placeholder="Placeholder" value={value}  className={`input ${className}  ${size} ${checkerror} ${checkfullWidth} ${checkmultiline}  `}{...props}>
+            <input placeholder="Placeholder" value={value ? value : null}  className={`input ${className}  ${size} ${checkerror} ${checkfullWidth} ${checkmultiline} ${startIcon ? 'input-start' : null} `}{...props}>
             </input>
             <label className={`standard-label ${checkerrorLabel}`}>{childrent || "Label"}</label>
             <p className="helperText">{helperText}</p>

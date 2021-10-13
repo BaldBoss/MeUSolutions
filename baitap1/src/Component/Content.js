@@ -5,7 +5,8 @@ function Content(props) {
     const history = useHistory();
     const info = props.info;
     return (
-        <div className="section">
+        <div className="main">
+            <div className="section">
             <div className="Container">
                 <form noValidate id="detailsForm">
                     <div className="grid">
@@ -53,7 +54,7 @@ function Content(props) {
                             </label>
 
                         </div>
-                        <div className="grid_block_full">
+                        <div className="grid_block full">
                             <label>
                                 <div className="field-label">
                                     Notes*
@@ -64,7 +65,7 @@ function Content(props) {
                             </label>
 
                         </div>
-                        <div className="grid_block_full ta-c">
+                        <div className="grid_block full ta-c">
                             <button type="button" className="button secondary" onClick={()=> history.push('/edit')}  >
                                 Edit
                             </button>
@@ -75,6 +76,8 @@ function Content(props) {
             </div>
             
         </div>
+        </div>
+        
     )
 }
 
