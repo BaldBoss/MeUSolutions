@@ -1,5 +1,4 @@
 import React from 'react';
-import "../Component/input.css"
 const input = ({
     childrent,
     errorLabel =false,

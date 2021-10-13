@@ -1,0 +1,200 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  .wrapper {
+    margin: 0;
+    padding: 2em 6em;
+    .title {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #4f4f4f;
+    }
+    .row {
+      display: flex;
+      margin-top: 3em;
+      width: 70%;
+      justify-content: space-between;
+      .input-container {
+        width: 100%;
+        .inputwrapper {
+          display: flex;
+          flex-direction: column-reverse;
+          position: relative;
+          width: 100%;
+          .input {
+            width: 200px;
+            height: 56px;
+            border: 1px solid $greyColor;
+            box-sizing: border-box;
+            border-radius: 8px;
+            display: block;
+            font-family: Noto Sans JP;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $darkColor;
+            padding: 10px;
+            &::placeholder {
+              opacity: 1;
+              color: $greyColor;
+            }
+            &:disabled {
+              background: #f2f2f2;
+              border: 1px solid #e0e0e0;
+              &:hover {
+                border: 1px solid #e0e0e0 !important;
+              }
+              &:focus {
+                border: 1px solid #e0e0e0 !important;
+              }
+            }
+            &:hover {
+              border: 2px solid $darkColor;
+            }
+            &:focus {
+              border: 2px solid #2962ff;
+              outline: transparent;
+              + {
+                .standard-label {
+                  color: #2962ff;
+                }
+              }
+            }
+          }
+          .sm {
+            width: 200px;
+            height: 40px;
+          }
+          .md {
+            width: 200px;
+            height: 56px;
+          }
+          .fullWidth {
+            width: 100%;
+          }
+          .inputActive-hover {
+            border: 2px solid $darkColor;
+          }
+          .error {
+            border: 2px solid $errorColor;
+            ~ {
+              .standard-label {
+                color: $errorColor;
+              }
+              .helperText {
+                color: $errorColor;
+              }
+            }
+            &:hover {
+              + {
+                .standard-label {
+                  color: $darkColor;
+                }
+              }
+            }
+            &:focus {
+              border: 2px solid $errorColor;
+              outline: transparent;
+              + {
+                .standard-label {
+                  color: $errorColor;
+                }
+              }
+            }
+          }
+          .errorActive-focus {
+            &:focus {
+              border: 2px solid $errorColor;
+              outline: transparent;
+              + {
+                .standard-label {
+                  color: $errorColor;
+                }
+              }
+            }
+            border: 2px solid $errorColor;
+            outline: transparent;
+            + {
+              .standard-label {
+                color: $errorColor;
+              }
+            }
+            &:hover {
+              + {
+                .standard-label {
+                  color: $darkColor;
+                }
+              }
+            }
+          }
+          .input-start {
+            padding-left: 50px;
+            &::placeholder {
+              padding: 0 !important;
+            }
+          }
+          .inputActive-focus {
+            border: 2px solid #2962ff;
+            outline: transparent;
+            + {
+              .standard-label {
+                color: #2962ff;
+              }
+            }
+            &:hover {
+              + {
+                .standard-label {
+                  color: $darkColor;
+                }
+              }
+            }
+          }
+          .helperText {
+            margin: 0;
+            padding: 0;
+            font-size: 10px;
+            line-height: 14px;
+            color: $greyColor;
+            position: absolute;
+            bottom: -15px;
+            left: 2px;
+          }
+          .error-label {
+            color: $errorColor;
+          }
+          .start-icon {
+            position: absolute;
+            top: 33px;
+            left: 10px;
+            color: $greyColor;
+            ~ {
+              .input {
+                &::placeholder {
+                  padding: 40px;
+                }
+              }
+            }
+          }
+          .end-icon {
+            position: absolute;
+            top: 33px;
+            left: 150px;
+            color: $greyColor;
+          }
+          .multiline {
+            height: auto;
+            resize: none;
+            width: 200px;
+            line-height: 2.5em;
+            border-radius: 8px;
+            border: 1px solid #828282;
+            box-sizing: border-box;
+            padding: 12px;
+          }
+        }
+      }
+    }
+  }
+}

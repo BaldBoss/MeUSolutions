@@ -1,5 +1,5 @@
 
-import './App.css';
+import './App.scss';
 import Input from './Component/input';
 
 function App() {
