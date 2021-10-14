@@ -1,3 +1,27 @@
+$mobile-width: 480px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin breadkpoint($point) {
+  @if $point == ml {
+    @media (max-width: 1250px) {
+      @content;
+    }
+  }
+}
+
 @mixin flexCenter($direction) {
   display: flex;
   justify-content: center;
