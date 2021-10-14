@@ -54,7 +54,7 @@ function RandomQuote() {
         <div className="container">
             <button onClick={fetchRandomQuote} className="btn-random">
                 <p>random</p>
-                <span class="material-icons">
+                <span className="material-icons">
                 autorenew
                 </span>
             </button>
