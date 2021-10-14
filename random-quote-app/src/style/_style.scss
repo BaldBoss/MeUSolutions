@@ -1,0 +1,105 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  .container {
+    width: 100vw;
+    height: 100vh;
+    @include flexCenter(column);
+    position: relative;
+    .btn-random {
+      display: flex;
+      height: 50px;
+      width: 100px;
+      cursor: pointer;
+      justify-content: space-around;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 120%;
+      /* identical to box height, or 22px */
+
+      color: #4f4f4f;
+      transition: 1s;
+      p {
+        margin-top: 3px;
+      }
+      &:hover {
+        color: #b34747;
+      }
+    }
+    .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 614px;
+
+      font-weight: 500;
+      font-size: 36px;
+      line-height: 120%;
+      /* or 43px */
+
+      color: #000000;
+      border-left: 8px solid #f7df94;
+      padding-left: 99px;
+      background-color: #fffefb;
+      margin-bottom: 100px;
+    }
+    .btn-author {
+      @include flexCenter(row);
+      justify-content: space-between;
+      width: 672px;
+      height: 151px;
+      padding: 20px;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      transition: 1s;
+      h5 {
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 28px;
+        color: #4f4f4f;
+        margin-bottom: 10px;
+        transition: 1s;
+      }
+      p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #828282;
+        transition: 1s;
+      }
+      span {
+        color: #fff;
+      }
+      &:hover {
+        background-color: #333;
+        h5 {
+          color: #fff;
+        }
+        p {
+          color: #fff;
+        }
+      }
+    }
+  }
+  .container-author {
+    justify-content: unset;
+    h1 {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 42px;
+
+      color: #333333;
+      margin-top: 100px;
+      margin-bottom: 100px;
+    }
+  }
+}
