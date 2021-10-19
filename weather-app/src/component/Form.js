@@ -16,22 +16,28 @@ const Form = ({submitSearch, isSearch , onSearch}) =>{
     return (
         <div className={isSearch?"form-container form-display" : "form-container"}>
             <button className="btn-x" onClick={onSearch}>x</button>
-            <form onSubmit={onSubmit}>
-                <input 
-                    aria-label="Location"
-                    type="text"
-                    placeholder="Search for location"
-                    
-                    onChange={e => setLocation(e.target.value)}
-                    required
-                ></input>
-                <button type="submit" onClick={onSubmit}>Search</button>
-            </form>
-            <div className="list-container">
-                {locationList.map((item) =>(
-                    <button key={item} className="list-item" onClick={() => {submitSearch(item); onSearch()}}>{item}<i className="fas fa-chevron-right"></i></button>
-                ))}
+            <div className='form-hide'>
+                <form onSubmit={onSubmit}>
+                    <input 
+                        aria-label="Location"
+                        type="text"
+                        placeholder="Search for location"
+                        
+                        onChange={e => setLocation(e.target.value)}
+                        required
+                    ></input>
+                    <button type="submit" onClick={onSubmit}>Search</button>
+                </form>
             </div>
+           
+            <div className="list-container-hide">
+                <div className="list-container">
+                    {locationList.map((item) =>(
+                        <button key={item} className="list-item" onClick={() => {submitSearch(item); onSearch()}}>{item}<i className="fas fa-chevron-right"></i></button>
+                    ))}
+                </div>
+            </div>
+
         </div>
     )
 }
