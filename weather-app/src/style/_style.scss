@@ -5,11 +5,18 @@ body {
   width: 100%;
   .App {
     display: flex;
+    position: relative;
     @include tablet {
       flex-wrap: wrap;
     }
     @include mobile {
       flex-wrap: wrap;
+    }
+    .error {
+      position: absolute;
+      color: rgb(250, 8, 8);
+      top: 0;
+      left: 2%;
     }
     .CurrentDay-Containter {
       width: 40%;

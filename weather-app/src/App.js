@@ -35,12 +35,16 @@ function App() {
   useEffect(() =>{
     const location = "Berlin"
     submitRequest(location)
-  },)
+  },[])
   return (
     <div className="App">
       <Form submitSearch={onSubmit} isSearch={isSearch} onSearch={onSearch}></Form>
       <CurrentDay forecast={forecast} onSearch={onSearch} onSubmitLatLong={onSubmitLatLong} isConvert={Convert}/>
-      {isError && isError}
+      {isError && (
+        <div className="error">
+          <p>{isError}</p>
+        </div>
+      )}
       <div className="Content-Right">
         <UpcomingDay forecast={forecast} onConvert={onConvert} isConvert={Convert}></UpcomingDay>
         <TodayHightlight forecast={forecast}></TodayHightlight>
