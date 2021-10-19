@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.scss';
 import Form from "./component/Form"
 import { useEffect, useState } from 'react';
@@ -36,7 +35,7 @@ function App() {
   useEffect(() =>{
     const location = "Berlin"
     submitRequest(location)
-  },[])
+  },)
   return (
     <div className="App">
       <Form submitSearch={onSubmit} isSearch={isSearch} onSearch={onSearch}></Form>

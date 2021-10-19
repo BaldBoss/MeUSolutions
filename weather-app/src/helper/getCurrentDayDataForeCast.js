@@ -1,4 +1,4 @@
-import moment from 'moment'
+
 
 const getCurrentDayDataForeCast = data =>[
     {
