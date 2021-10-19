@@ -1,0 +1,247 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  .App {
+    display: flex;
+    @include tablet {
+      flex-wrap: wrap;
+    }
+    @include mobile {
+      flex-wrap: wrap;
+    }
+    .CurrentDay-Containter {
+      width: 40%;
+      background-color: #1e213a;
+      position: relative;
+      @include tablet {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+      .btn-wrap {
+        display: flex;
+        justify-content: space-between;
+        padding: 40px;
+        .search-btn {
+          background: #6e707a;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          width: 161px;
+          height: 40px;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          /* identical to box height */
+
+          color: #e7e7eb;
+          @include mobile {
+            width: 150px;
+            height: 40px;
+          }
+          @include tablet {
+            width: 150px;
+            height: 40px;
+          }
+        }
+        .location-btn {
+          background: rgba(255, 255, 255, 0.2);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          color: #e7e7eb;
+          @include mobile {
+            width: 30px;
+            height: 30px;
+          }
+          @include tablet {
+            width: 30px;
+            height: 30px;
+          }
+        }
+      }
+      .content-wrap {
+        width: 100%;
+        max-height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        .weather-icon {
+          width: 202px;
+          height: 234px;
+          @include mobile {
+            width: 100px;
+            height: 150px;
+          }
+          @include tablet {
+            width: 150px;
+            height: 180px;
+          }
+        }
+        .cloud {
+          width: 100%;
+          text-align: center;
+          background: url("../img/Cloud-background.png");
+          background-repeat: no-repeat;
+          background-position: 50% 50%;
+          background-size: contain;
+        }
+        h1 {
+          font-size: 144px;
+          line-height: 169px;
+          /* identical to box height */
+
+          color: #e7e7eb;
+          margin-bottom: 0;
+          @include mobile {
+            font-size: 50px;
+            line-height: 100px;
+          }
+          @include tablet {
+            font-size: 80px;
+            line-height: 100px;
+          }
+          span {
+            font-size: 50px;
+            color: #a09fb1;
+          }
+        }
+        h3 {
+          color: #a09fb1;
+          font-weight: 600;
+          font-size: 36px;
+          line-height: 42px;
+          @include mobile {
+            font-size: 25px;
+            line-height: 20px;
+          }
+          @include tablet {
+            font-size: 30px;
+            line-height: 30px;
+          }
+        }
+        .content-footer {
+          margin-top: 50px;
+          @include mobile {
+            margin-top: 30px;
+          }
+          @include tablet {
+            margin-top: 30px;
+          }
+          .content-footer__time {
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 21px;
+
+            color: #88869d;
+            @include mobile {
+              font-size: 15px;
+              line-height: 15px;
+            }
+            @include tablet {
+              font-size: 15px;
+              line-height: 15px;
+            }
+          }
+          .content-footer__location {
+            @extend .content-footer__time;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .form-container {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      width: 0;
+      height: 100%;
+      background-color: #1e213a;
+      transition: width 2s;
+      -webkit-transition: width 2s;
+      -moz-transition: width 2s;
+      .btn-x {
+        padding: 5px;
+        color: #e7e7eb;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 20px;
+        position: absolute;
+        top: 0;
+        right: 3%;
+      }
+      form {
+        margin-top: 40px;
+        padding: 20px;
+        display: flex;
+        input {
+          margin-left: 20px;
+          padding: 10px;
+          border: 1px solid #e7e7eb;
+          box-sizing: border-box;
+          background: transparent;
+          width: 80%;
+          height: 48px;
+          color: #fff;
+          &:hover {
+            box-shadow: 0 0 0 3px #3c47e9;
+          }
+        }
+        button {
+          background: #3c47e9;
+          width: 86px;
+          height: 48px;
+          color: #fff;
+          margin-left: 5px;
+        }
+      }
+      .list-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .list-item {
+          background: transparent;
+          border-radius: 3px;
+          box-sizing: border-box;
+          width: 80%;
+          height: 5rem;
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          margin-bottom: 10px;
+          border: none;
+          outline: none;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px;
+          &:first-child {
+            margin-top: 20px;
+          }
+          &:hover {
+            border: 1px solid #616475;
+          }
+          /* identical to box height */
+
+          color: #e7e7eb;
+        }
+      }
+    }
+    .form-display {
+      display: block;
+      width: 40%;
+      @include tablet {
+        width: 100%;
+      }
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}

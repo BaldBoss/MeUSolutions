@@ -1,0 +1,149 @@
+.Content-Right {
+  width: 60%;
+  background: #100e1d;
+  padding: 5rem;
+  overflow: hidden;
+  @include mobile {
+    width: 100%;
+    padding: 1rem;
+  }
+  @include tablet {
+    width: 100%;
+    padding: 2rem;
+  }
+  .upcomingDay-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    place-items: center;
+    position: relative;
+    padding-top: 50px;
+    @include mobile {
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 10px;
+      margin-bottom: 30px;
+    }
+    @include tablet {
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-gap: 10px;
+      margin-bottom: 30px;
+    }
+    .convert-btn {
+      position: absolute;
+      top: 0%;
+      right: 3%;
+      .c-btn {
+        background: #585676;
+        border-radius: 54px;
+        width: 40px;
+        height: 40px;
+        margin-right: 10px;
+        color: #fff;
+      }
+      .active {
+        background: #e7e7eb;
+        color: #000;
+      }
+    }
+    .upcomingDay-card {
+      text-align: center;
+      background: #1e213a;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 5px;
+      .minmax-temp {
+        display: flex;
+        justify-content: space-around;
+        .max {
+          font-weight: 500;
+          font-size: 16px;
+          line-height: 19px;
+          /* identical to box height */
+
+          color: #e7e7eb;
+        }
+        .min {
+          @extend .max;
+          color: #a09fb1;
+        }
+      }
+    }
+  }
+  .TodayHightlight-container {
+    color: #fff;
+    h1 {
+      @include mobile {
+        font-size: 25px;
+      }
+      @include tablet {
+        font-size: 40px;
+      }
+    }
+    .hightlight-wrapper {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 50px;
+      text-align: center;
+      @include mobile {
+        grid-template-columns: 1fr;
+      }
+      .hightlight-box {
+        background: #1e213a;
+        h3 {
+          color: #e7e7eb;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 2rem;
+          line-height: 19px;
+          @include mobile {
+            font-size: 1.5rem;
+            line-height: 15px;
+          }
+          @include tablet {
+            font-size: 1.5rem;
+            line-height: 15px;
+          }
+        }
+        h1 {
+          font-weight: bold;
+          font-size: 64px;
+          line-height: 75px;
+
+          color: #e7e7eb;
+          @include mobile {
+            font-size: 2rem;
+            line-height: 50px;
+          }
+          @include tablet {
+            font-size: 2.5rem;
+            line-height: 50px;
+          }
+        }
+        p {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+
+          color: #e7e7eb;
+        }
+        .bar-container {
+          width: 80%;
+          background: #fff;
+          height: 8px;
+          border-radius: 80px;
+          margin-left: auto;
+          margin-right: auto;
+          @include mobile {
+            margin-bottom: 20px;
+          }
+          .bar-progress {
+            text-align: right;
+            padding-top: 4px;
+            padding-bottom: 4px;
+            background-color: #04aa6d;
+          }
+        }
+      }
+    }
+  }
+}
